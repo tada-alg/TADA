@@ -39,7 +39,7 @@ The outputs of the code are (written on the output directory)
 Let's assume that you copied [github](git@github.com:tada-alg/TADA.git) repository in a directory **DIR** (e.g., **/home/username/**). You could see the TADA's manual using the following command. 
 
 ```
-python [DIR]/UCSD/TADA/src/utils/python/TADA_microbiom.py -h
+python [DIR]/TADA/src/utils/python/TADA_microbiom.py -h
 ```
 
 Anf here is the usage for TADA
@@ -112,7 +112,7 @@ Options:
 The training data size has a tremendous effect on the machine learning method performance. Generating new samples from the training data can be helpful. To use TADA for data augmentation, you can use the following command
 
 ```
-python [DIR]/UCSD/TADA/src/utils/python/TADA_microbiom.py -t [phylogeny_fp] -b [table_fp] -o [output_dir]
+python [DIR]/TADA/src/utils/python/TADA_microbiom.py -t [phylogeny_fp] -b [table_fp] -o [output_dir]
 ```
 
 Please download the example data available [here](data/reference/test.tar.gz). Next unarchive the file and go to the resulting directory
@@ -126,7 +126,7 @@ Next, you can augment data (using hierarchy of binomials) to it using the follow
 
 ```
 mkdir binom
-python [DIR]/UCSD/TADA/src/utils/python/TADA_microbiom.py -t phylogeny.tre -b feature-table.biom -o ./binom
+python [DIR]/TADA/src/utils/python/TADA_microbiom.py -t phylogeny.tre -b feature-table.biom -o ./binom
 ```
 
 
@@ -134,7 +134,7 @@ This will create a log file `binom/logfile.log[random suffix]`, and the augmente
 
 ```
 mkdir beta_binom
-python [DIR]/UCSD/TADA/src/utils/python/TADA_microbiom.py -t phylogeny.tre -b feature-table.biom -o ./beta_binom -z beta_binom
+python [DIR]/TADA/src/utils/python/TADA_microbiom.py -t phylogeny.tre -b feature-table.biom -o ./beta_binom -z beta_binom
 ```
 
 This will create a log file `beta_binom/logfile.log[random suffix]`, and the augmented data file in biom format `beta_binom/augmented_data.biom`.
@@ -144,7 +144,7 @@ This will create a log file `beta_binom/logfile.log[random suffix]`, and the aug
 In microbiome samples, the distribution of class labels (or cluster labels for unsupervised learning) is often unbalanced. This can cause overfitting and poor generalization of the machine learning method on new samples. You can use TADA to generate new samples for the underrepresented classes to make classes the same size. For this application, you can use TADA with the following command
 
 ```
-python [DIR]/UCSD/TADA/src/utils/python/TADA_microbiom.py -t [phylogeny_fp] -b [table_fp] -o [output_dir] -g [metadata_fp] 
+python [DIR]/TADA/src/utils/python/TADA_microbiom.py -t [phylogeny_fp] -b [table_fp] -o [output_dir] -g [metadata_fp] 
 ```
 Please download the example data available [here](data/reference/test.tar.gz). Next unarchive the file and go to the resulting directory
 
@@ -157,7 +157,7 @@ Next, you can generate synthetic data (using hierarchy of binomials) to create b
 
 ```
 mkdir binom
-python [DIR]/UCSD/TADA/src/utils/python/TADA_microbiom.py -t phylogeny.tre -b feature-table.biom -o ./binom -g metadata.csv
+python [DIR]/TADA/src/utils/python/TADA_microbiom.py -t phylogeny.tre -b feature-table.biom -o ./binom -g metadata.csv
 ```
 
 This will generate the folder `binom`, and it will create the following files under this directory:
@@ -172,14 +172,14 @@ If you wish to use the Beta-Binomial generative model, you can use the following
 
 ```
 mkdir beta_binom
-python [DIR]/UCSD/TADA/src/utils/python/TADA_microbiom.py -t phylogeny.tre -b feature-table.biom -o ./beta_binom -g metadata.csv -z beta_binom
+python [DIR]/TADA/src/utils/python/TADA_microbiom.py -t phylogeny.tre -b feature-table.biom -o ./beta_binom -g metadata.csv -z beta_binom
 ```
 
 The outputs are similar to what described above. The above command will generate enough number of samples for the least size cluster/class (in provided example, from group `1`) so that both groups have the same size. In this implementation of TADA, user can choose to continue generating samples so that the final size of each group be a multiple of initial size of the most frequent group. For example, if the most frequent gorup has `20` samples, and the least size group has `10` samples, and user wishes to have augmentation level of `5x`, then the final size of both classes will be `120 = (5)*20 + 20`. The augmentation level of `0x` means the user wants both classes the same size and no further augmentation (default). For example, the following command will peform a `5x` augmentation.
 
 ```
 mkdir beta_binom
-python [DIR]/UCSD/TADA/src/utils/python/TADA_microbiom.py -t phylogeny.tre -b feature-table.biom -o ./beta_binom -g metadata.csv -z beta_binom -x 5
+python [DIR]/TADA/src/utils/python/TADA_microbiom.py -t phylogeny.tre -b feature-table.biom -o ./beta_binom -g metadata.csv -z beta_binom -x 5
 ```
 
 The outpus are similar to what described above. Please note that in the augmented meta data file, there are `110` samples with class `1` and `100` samples with class 0. Overal, you will have `120` samples for both classes. 
