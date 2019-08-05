@@ -115,7 +115,7 @@ The training data size has a tremendous effect on the machine learning method pe
 python [DIR]/UCSD/TADA/src/utils/python/TADA_microbiom.py -t [phylogeny_fp] -b [table_fp] -o [output_dir]
 ```
 
-Please download the example data available [here](https://github.com/tada-alg/TADA/blob/master/data/reference/test.tar.gz). Next unarchive the file and go to the resulting directory
+Please download the example data available [here](data/reference/test.tar.gz). Next unarchive the file and go to the resulting directory
 
 ```
 tar xzvf test.tar.gz
@@ -146,7 +146,7 @@ In microbiome samples, the distribution of class labels (or cluster labels for u
 ```
 python [DIR]/UCSD/TADA/src/utils/python/TADA_microbiom.py -t [phylogeny_fp] -b [table_fp] -o [output_dir] -g [metadata_fp] 
 ```
-Please download the example data available [here](https://github.com/tada-alg/TADA/blob/master/data/reference/test.tar.gz). Next unarchive the file and go to the resulting directory
+Please download the example data available [here](data/reference/test.tar.gz). Next unarchive the file and go to the resulting directory
 
 ```
 tar xzvf test.tar.gz
