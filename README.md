@@ -133,7 +133,7 @@ python [DIR]/UCSD/TADA/src/utils/python/TADA_microbiom.py -t phylogeny.tre -b fe
 This will create a log file `binom/logfile.log[random suffix]`, and the augmented data file in biom format `binom/augmented_data.biom`. If you wish using beta binomial, you can use the following command
 
 ```
-midir beta_binom
+mkdir beta_binom
 python [DIR]/UCSD/TADA/src/utils/python/TADA_microbiom.py -t phylogeny.tre -b feature-table.biom -o ./beta_binom -z beta_binom
 ```
 
