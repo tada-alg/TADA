@@ -17,7 +17,7 @@ conda install numpy pandas scikit-learn
 conda install -c bioconda dendropy biom-format 
 ```
 
-Then clone this [github](git@github.com:CognitiveHorizons/UCSD.git) repository somewhere on your machine.
+Then clone this [github](git@github.com:tada-alg/TADA.git) repository somewhere on your machine.
 
 
 ## Running
@@ -36,7 +36,7 @@ The outputs of the code are (written on the output directory)
 4. Only for balancing: A copy of the metadata for original data
 5. The log file to keep track of progress and errors
 
-Let's assume that you copied [github](git@github.com:CognitiveHorizons/UCSD.git) repository in a directory **DIR** (e.g., **/home/username/**). You could see the TADA's manual using the following command. 
+Let's assume that you copied [github](git@github.com:tada-alg/TADA.git) repository in a directory **DIR** (e.g., **/home/username/**). You could see the TADA's manual using the following command. 
 
 ```
 python [DIR]/UCSD/TADA/src/utils/python/TADA_microbiom.py -h
@@ -115,7 +115,7 @@ The training data size has a tremendous effect on the machine learning method pe
 python [DIR]/UCSD/TADA/src/utils/python/TADA_microbiom.py -t [phylogeny_fp] -b [table_fp] -o [output_dir]
 ```
 
-Please download the example data available [here](https://github.com/CognitiveHorizons/UCSD/blob/dev-embeddings/TADA/data/reference/test.tar.gz). Next unarchive the file and go to the resulting directory
+Please download the example data available [here](https://github.com/tada-alg/TADA/blob/master/data/reference/test.tar.gz). Next unarchive the file and go to the resulting directory
 
 ```
 tar xzvf test.tar.gz
@@ -146,7 +146,7 @@ In microbiome samples, the distribution of class labels (or cluster labels for u
 ```
 python [DIR]/UCSD/TADA/src/utils/python/TADA_microbiom.py -t [phylogeny_fp] -b [table_fp] -o [output_dir] -g [metadata_fp] 
 ```
-Please download the example data available [here](https://github.com/CognitiveHorizons/UCSD/blob/dev-embeddings/TADA/data/reference/test.tar.gz). Next unarchive the file and go to the resulting directory
+Please download the example data available [here](https://github.com/tada-alg/TADA/blob/master/data/reference/test.tar.gz). Next unarchive the file and go to the resulting directory
 
 ```
 tar xzvf test.tar.gz
@@ -190,7 +190,7 @@ Please note that you can specify the seed number for the random number generator
 
 # Importing and preprocessing data
 
-This tutorial is based on the official [Qiime2](https://docs.qiime2.org/2019.4/tutorials/overview/) tutorials. We also created in-house scripts (all based on Qiime2) to import files from FASTA and FASTQ format to Qiime2 artifacts, denoise them using Deblur, and create the phylogeny. You can read more about them [here](https://github.com/CognitiveHorizons/UCSD/tree/dev-embeddings/TADA/src/utils/shell/). 
+This tutorial is based on the official [Qiime2](https://docs.qiime2.org/2019.4/tutorials/overview/) tutorials. We also created in-house scripts (all based on Qiime2) to import files from FASTA and FASTQ format to Qiime2 artifacts, denoise them using Deblur, and create the phylogeny. You can read more about them [here](https://github.com/tada-alg/TADA/tree/master/src/utils/shell). 
 
 
  

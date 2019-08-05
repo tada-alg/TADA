@@ -173,9 +173,9 @@ The R scirpts to generate the figures we produced in the paper are avaialble [he
 
 ### Datasets
 
-* The AGP dataset is available here [AGP](????), and the generated data are avaialble [TADA-AGP](????).
-* The Gevers dataset is available here [Gevers](????), and the generated data are avaialble [TADA-Gevers](????).
-* The option files are available here [options](????).
+* The AGP dataset is available here [AGP](https://github.com/tada-alg/TADA/blob/master/data/reference/TADA_input.tar.gz).
+* The Gevers dataset is available here [Gevers](https://github.com/tada-alg/TADA/blob/master/data/reference/TADA_input.tar.gz).
+* The option files are available here [options](https://github.com/tada-alg/TADA/blob/master/data/reference/options.tar.gz).
 
 ## References
 1.  Junier, T. and Zdobnov, E.M., 2010. The Newick utilities: high-throughput phylogenetic tree processing in the UNIX shell. Bioinformatics, 26(13), pp.1669-1670.
