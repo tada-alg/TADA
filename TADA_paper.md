@@ -169,7 +169,7 @@ python run_classification_balance_by_orig_data.py -z <input_augmentation.tar> -o
 ```
 
 ### Figures and R scripts in the paper 
-The R scirpts to generate the figures we produced in the paper are avaialble [here](R/).
+The R scirpts to generate the figures we produced in the paper are avaialble [here](src/R/).
 
 ### Datasets
 
