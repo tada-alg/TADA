@@ -6,7 +6,7 @@ import os
 import platform
 import sys
 import re
-
+import ast
 # version parsing from __init__ pulled from Flask's setup.py
 # https://github.com/mitsuhiko/flask/blob/master/setup.py
 _version_re = re.compile(r'__version__\s+=\s+(.*)')
@@ -30,7 +30,7 @@ setup(name = 'TADA',
                         "numpy>=1.14.0","sklearn>=0.19.1", "skbio>=0.5.5",
                         "scipy>=1.0.0","pandas>=0.22.0"],
       scripts=["src/utils/scripts/*"],
-      package_dir = {'tada': 'src/utils/tada/'}
+      package_dir = {'tada': 'src/utils/tada/'},
       classifiers = ["Environment :: Console",
                      "Intended Audience :: Developers",
                      "Intended Audience :: Science/Research",
@@ -42,4 +42,3 @@ setup(name = 'TADA',
                      "Programming Language :: Python",
                      "Programming Language :: Python :: 3.6",
                      "Topic :: Scientific/Engineering :: Bio-Informatics"])
-     )
