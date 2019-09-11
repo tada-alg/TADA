@@ -1,7 +1,7 @@
 from time import time
 from numpy import random
 import tarfile
-from TADA_data import Data
+from tada.TADA_data import Data
 import os
 import numpy as np
 import unittest

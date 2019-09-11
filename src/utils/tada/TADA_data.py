@@ -5,7 +5,7 @@ import tempfile
 import numpy as np
 from time import time
 import os
-from logger import *
+from tada.logger import *
 
 CUR_PATH = os.path.dirname(os.path.abspath(__file__))
 
