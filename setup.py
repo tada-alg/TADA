@@ -20,7 +20,7 @@ long_description = ("TADA: phylogenetic augmentation of microbiome samples enhan
 
 setup(name = 'TADA',
       version = __version__,
-      long_description = long_description
+      long_description = long_description,
       description = 'TADA',
       author = 'Erfan Sayyari, Ban Kawas, Siavash Mirarab',
       author_email = 'smirarabbaygi@eng.ucsd.edu',
