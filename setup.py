@@ -30,7 +30,7 @@ setup(name = 'TADA',
                         "numpy>=1.14.0","sklearn>=0.19.1", "skbio>=0.5.5",
                         "scipy>=1.0.0","pandas>=0.22.0"],
       scripts=["src/utils/scripts/*"],
-      package_dir = {'tada': 'src/utils/tada/'}
+      package_dir = {'tada': 'src/utils/tada/'},
       classifiers = ["Environment :: Console",
                      "Intended Audience :: Developers",
                      "Intended Audience :: Science/Research",
